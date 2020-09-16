@@ -1,19 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using TestVH.Interface;
 
-namespace VirtualHome
+namespace TestVH
 {
-    class Device
+    public abstract class Device : IDevice
     {
-        private string name;
+        public string DeviceName { get; private set; }
 
-        public Device(string Name)
+        public bool Status { get; private set; }
+
+        public Room Location { get; private set; }
+
+        public Guid DeviceID { get; }
+
+        public Device(string deviceName)
         {
-            this.Name = Name;
+            DeviceName = deviceName;
+            DeviceID = Guid.NewGuid();
         }
 
-        public string Name { get => name; set => name = value; }
+        public void AssignRoom(Room room)
+        {
+            Location = room;
+        }
+        //public void AssignRoom(Room room) => Location = room;
 
+        public void TurnOffDevice()
+        {
+            Status = false;
+        }
+        //public void TurnOffDevice() => Status = false;
+
+        public void TurnOnDevice()
+        {
+            Status = true;
+        }
+        //public void TurnOffDevice() => Status = true;
     }
 }
