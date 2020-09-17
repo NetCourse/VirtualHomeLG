@@ -1,12 +1,10 @@
-﻿using TestVH.Services;
-
-namespace TestVH
+﻿namespace VirtualHomeBL
 {
     class Program
     {
         static void Main(string[] args)
         {
-            DeviceManager deviceManager = DeviceManager.GetInstance();
+            //DeviceManager deviceManager = DeviceManager.GetInstance();
 
             HouseBuilder Cave = new HouseBuilder();
             Cave.AddRooom(new Room("Kitchen", Room.RoomType.Kitchen));
@@ -16,8 +14,7 @@ namespace TestVH
 
             Cave.PrintRoomList(); // how to print room name?
 
-            deviceManager.AddDevice(new Room("Kitchen", Room.RoomType.Kitchen), deviceManager.AddDevice());
-
+            //deviceManager.AddDevice(new Room("Kitchen", Room.RoomType.Kitchen), deviceManager.AddDevice());
         }
     }
 }

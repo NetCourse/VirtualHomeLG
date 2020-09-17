@@ -1,7 +1,4 @@
-﻿using System;
-using System.Text.RegularExpressions;
-
-namespace TestVH
+﻿namespace VirtualHomeBL
 {
     public class Room
     {
@@ -11,28 +8,11 @@ namespace TestVH
             Bathroom = 2,
             Livingroom = 3,
             Bedroom = 4,
-
         }
 
         public string Name { get; }
-        public RoomType Type { get; }
 
-        //public string name { get; set; }
-
-        //public string Name
-        //{
-        //    get
-        //    {
-        //        return Name;
-        //    }
-        //    private set
-        //    {
-        //        if (Regex.isMatch(name, "[A-Z]+"))
-        //        {
-        //            this.Name = value;
-        //        }
-        //    }
-        //}
+        public RoomType Type { get; }      
 
         public Room(string name, RoomType type)
         {

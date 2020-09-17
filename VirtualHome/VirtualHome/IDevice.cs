@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TestVH.Interface
+namespace VirtualHomeBL
 {
     interface IDevice
     {

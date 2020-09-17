@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TestVH.Services
+namespace VirtualHomeBL
 {
     public class DeviceManager
     {

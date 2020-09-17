@@ -1,8 +1,7 @@
 ﻿using System;
-using TestVH.Interface;
 
-namespace TestVH
-{
+namespace VirtualHomeBL
+{ 
     public abstract class Device : IDevice
     {
         public string DeviceName { get; private set; }
